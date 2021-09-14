@@ -38,7 +38,7 @@ jobs:
 
       - name: Trigger documentation build
         run: |
-           curl -X POST https://api.github.com/repos/CodeBetterEveryDay/repo-website/dispatches \
+          curl -X POST https://api.github.com/repos/CodeBetterEveryDay/repo-website/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u ${{ secrets.ACCESS_TOKEN }} \
           --data '{"event_type": "build_website", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
